@@ -27,6 +27,7 @@ body {
 
     header {
         text-align: center;
+        padding: 10px 0;
     }
 
     nav {
@@ -35,13 +36,36 @@ body {
         text-align: center;
     }
 
+    .menu {
+        font-size: 20px;
+        background-color: #00aaff; /* Fondo llamativo */
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+        display: block;
+        margin: 10px 0;
+    }
+
     .menu-list {
         width: 100%;
         position: static;
+        background-color: #282c34; /* Fondo oscuro para destacar */
+        margin-top: 10px;
+        border-radius: 5px;
+        overflow: hidden;
     }
 
     .menu-list li a {
         padding: 15px;
+        color: #00aaff; /* Texto de color llamativo */
+        font-weight: bold;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-list li a:hover {
+        background-color: #575757;
+        color: #fff; /* Texto blanco al pasar el ratón */
     }
 
     .destacadas-grid {
@@ -56,7 +80,7 @@ body {
 
     .destacada-item img {
         width: 100%;
-        height: auto; /* Ajuste automático de altura */
+        height: auto;
         object-fit: cover;
         border-radius: 0; /* Quitar bordes redondeados */
     }

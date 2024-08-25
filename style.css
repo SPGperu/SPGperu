@@ -19,6 +19,64 @@ body {
         transform: translateY(0);
     }
 }
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .menu-list {
+        width: 100%;
+        position: static;
+    }
+
+    .menu-list li a {
+        padding: 15px;
+    }
+
+    .destacadas-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .destacada-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .destacada-item img {
+        height: auto;
+    }
+
+    .noticia-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .noticia img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .texto h3 {
+        font-size: 18px;
+    }
+}
 
 /* Aplicando la animación al título */
 header h1 {

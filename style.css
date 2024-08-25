@@ -1,5 +1,67 @@
 /* styles.css */
 
+/* Estilos del botón de menú para móviles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Mostrar el botón de menú solo en móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-list {
+        display: none; /* Ocultar el menú por defecto en móviles */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #282c34;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-list li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-list li a {
+        color: #00aaff;
+        padding: 15px;
+        font-weight: bold;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-list li a:hover {
+        background-color: #575757;
+        color: #fff;
+    }
+
+    .menu-list.active {
+        display: block; /* Mostrar el menú cuando esté activo */
+    }
+}
+
+/* Estilo para el menú cuando está activo */
+.menu-list.active {
+    display: block;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;

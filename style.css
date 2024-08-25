@@ -55,7 +55,14 @@ body {
     }
 
     .destacada-item img {
-        height: auto;
+        width: 100%;
+        height: auto; /* Ajuste automático de altura */
+        object-fit: cover;
+        border-radius: 0; /* Quitar bordes redondeados */
+    }
+
+    .descripcion {
+        border-radius: 0; /* Quitar bordes redondeados de la descripción */
     }
 
     .noticia-contenido {
@@ -67,6 +74,7 @@ body {
     .noticia img {
         max-width: 100%;
         margin-bottom: 10px;
+        border-radius: 0; /* Quitar bordes redondeados */
     }
 
     .texto {

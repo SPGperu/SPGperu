@@ -40,29 +40,6 @@ nav {
     border-radius: 4px;
 }
 
-/* Estilos Responsivos para pantallas pequeñas (menos de 768px) */
-@media (max-width: 768px) {
-    .noticia-central {
-        padding: 20px;
-        margin: 10px;
-    }
-
-    .noticia-central h2 {
-        font-size: 24px;
-    }
-
-    .noticia-central p {
-        font-size: 16px;
-    }
-
-    .noticia-central img {
-        height: 250px; /* Ajustar altura de la imagen en pantallas pequeñas */
-    }
-
-    .informacion-noticia {
-        font-size: 16px;
-    }
-}
 
 
 @media (max-width: 768px) {
@@ -88,21 +65,8 @@ nav {
     }
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        text-align: center;
-        width: 100%;
-    }
 
-    nav {
-        text-align: center;
-        width: 100%;
-    }
 
-    .menu-list {
-        justify-content: center;
-    }
-}
 
 /* Estilos Responsivos para pantallas pequeñas (menos de 1024px) */
 @media (max-width: 1024px) {
@@ -686,3 +650,37 @@ footer p {
         max-width: 100%;
     }
 }
+/* Agregar este bloque al final de style.css */
+@media (max-width: 768px) {
+    .noticia-central {
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .noticia-central h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .noticia-central p {
+        font-size: 16px;
+    }
+
+    .noticia-central img {
+        width: 100%;
+        height: auto;
+    }
+
+    .informacion-noticia {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .informacion-noticia img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+}
+

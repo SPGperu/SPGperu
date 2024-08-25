@@ -7,34 +7,55 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Estilos específicos para esta página */
-        .noticia-central {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-        }
-        
-        .noticia-central img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        /* Estilos específicos para la página 5 en pantallas pequeñas (menos de 768px) */
+        @media (max-width: 768px) {
+            .noticia-central {
+                padding: 30px;
+                margin: 10px;
+                max-width: 100%;
+            }
+
+            .noticia-central h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .noticia-central p {
+                font-size: 18px;
+            }
+
+            .noticia-central img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .informacion-noticia {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+
+            .informacion-noticia img {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
         }
 
-        .noticia-central h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+        /* Estilos para pantallas medianas (769px a 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .noticia-central {
+                padding: 40px;
+                margin: 20px;
+            }
 
-        .noticia-central p {
-            font-size: 18px;
-            margin: 0;
+            .noticia-central h2 {
+                font-size: 30px;
+            }
+
+            .noticia-central p {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -42,7 +63,7 @@
     <!-- Encabezado con el nombre del canal -->
     <header>
         <div class="container">
-            <h1>SPG Perú</h1>
+            <h1>Noticias del Canal de YouTube</h1>
             <nav>
                 <ul class="menu-list">
                     <li><a href="index.html">Inicio</a></li>
@@ -53,23 +74,13 @@
         </div>
     </header>
 
+    <!-- Sección de la noticia central -->
     <section class="section">
         <div class="container">
             <div class="noticia-central">
-                <img src="portada.jpg" alt="Imagen de la Noticia">
-                <h2>¿Rearme o modernización? El Nuevo aliado Militar del Perú.</h2>
-                <p>Nos hacemos fuertes por cielo, mar y tierra. Con los recientes acuerdos con Hyundai Rotem, STX Corporation y Korea Aerospace, Perú busca cambiar su panorama militar e industrial. Perú está en camino de reducir su dependencia de proveedores extranjeros ¿Rearme o modernización?</p>
-                
-                <!-- Información adicional de la noticia -->
-                <div class="informacion-noticia">
-                    <h3></h3>
-                    <p></p>
-                    <p>Es bien sabido que, aunque Perú ha tenido momentos de fortaleza militar en su historia, en general no ha sido considerado una potencia militar. Sin embargo, esto está cambiando. Perú ha librado un total de 8 guerras a lo largo de su historia y, en muchas de ellas, no ha salido bien parado. Pero con el nuevo aliado militar del país, esta situación quedará en el pasado.
-                    </p>
-                    <img src="Imagen de WhatsApp 2024-08-24 a las 12.52.51_10c64d61.jpg" alt="">
-                </div>
-                <!-- Fin de la información adicional -->
-                
+                <img src="imagen-noticia.jpg" alt="Imagen de la Noticia">
+                <h2>Título de la Noticia</h2>
+                <p>Descripción completa de la noticia. Aquí puedes agregar todos los detalles relevantes sobre la noticia que estás presentando. Este texto debe ser informativo y ofrecer valor a los lectores.</p>
             </div>
         </div>
     </section>

@@ -1,8 +1,18 @@
-// script.js
+// En tu archivo script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
 
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
 
-
-document.querySelector('.menu').addEventListener('click', function() {
-    const menuList = document.querySelector('.menu-list');
-    menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
+    // Cierra el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    });
 });
+
+

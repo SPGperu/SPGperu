@@ -1,0 +1,273 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color:#282c34;
+    color: #fff;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+header .menu-toggle {
+    display: block;
+    background-color: #282c34;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 1rem;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu ul li a:hover {
+    background-color: #444;
+}
+
+/* Estilos para pantallas grandes (PC) */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    header .logo h1 {
+        text-align: left;
+        font-size: 28px;
+    }
+
+    header .menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transform: none;
+        transition: none;
+    }
+
+    .menu ul {
+        flex-direction: row;
+    }
+
+    .menu ul li {
+        margin: 0 20px;
+    }
+
+    .menu ul li a {
+        color: #f5f5f5;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu ul li a:hover {
+        background-color: #f5f5f5;
+    }
+}
+/* Estilos para la noticia principal */
+.main-news {
+    text-align: center; /* Centra el contenido dentro de la sección */
+}
+
+.main-news .news-item {
+    display: flex; /* Usa flexbox para centrar el contenido */
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin: 0 auto; /* Centra el artículo en su contenedor */
+    max-width: 100%; /* Asegura que el artículo no exceda el ancho del contenedor */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Añade espacio alrededor del contenido */
+}
+
+.main-news .news-item img {
+    width: 100%; /* La imagen ocupa el ancho completo del artículo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 800px; /* Limita el ancho máximo de la imagen */
+    max-height: 500px; /* Limita la altura máxima de la imagen */
+    object-fit: cover;
+}
+
+.main-news .news-content {
+    padding: 20px; /* Añade espacio alrededor del contenido */
+}
+
+.main-news .news-content h3 {
+    font-size: 24px; /* Tamaño ajustado para el título */
+    margin: 0;
+}
+
+.main-news .news-content p {
+    margin: 10px 0;
+}
+
+.main-news .read-more {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-news .read-more:hover {
+    color: #007BFF;
+}
+/* Estilos para las secciones de noticias */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+    width: 250px; /* Tamaño ajustado para imagen más grande */
+    height: 150px; /* Tamaño ajustado para imagen más grande */
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.news-content h3 {
+    font-size: 20px; /* Tamaño ajustado para el título */
+    margin: 0;
+}
+
+.news-content p {
+    margin: 10px 0;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #007BFF;
+}
+
+/* Estilos para la sección "Otras Noticias" en móviles */
+@media (max-width: 767px) {
+    .other-news .news-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra el contenido horizontalmente */
+    }
+
+    .other-news .news-item {
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos estén en columna */
+        text-align: center; /* Centra el texto dentro de cada noticia */
+        width: 100%; /* Asegura que el ancho sea completo */
+        max-width: 400px; /* Establece un ancho máximo para las noticias */
+        margin-bottom: 20px; /* Añade espacio entre las noticias */
+    }
+
+    .other-news .news-item img {
+        width: 100%; /* La imagen ocupará el ancho completo del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-bottom: 10px; /* Añade espacio debajo de la imagen */
+    }
+
+    .other-news .news-content {
+        padding: 15px;
+    }
+
+    .other-news .news-content h3 {
+        font-size: 20px; /* Tamaño ajustado para el título */
+        margin: 0;
+    }
+
+    .other-news .news-content p {
+        margin: 10px 0;
+    }
+}

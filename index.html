@@ -3,117 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias del Canal de YouTube</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Noticias Perú</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>SPG Perú</h1>
-            <div class="menu-toggle" id="menu-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <nav>
-                <ul class="menu-list">
-                    <li><a href="#noticias">Noticias</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <h1>Noticias Perú</h1>
         </div>
+        <button class="menu-toggle">☰</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Economía</a></li>
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Sociedad</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-   
 
-    <!-- Sección de imágenes destacadas -->
-    <section id="destacadas" class="section">
-        <div class="container">
-            <div class="destacadas-grid">
-                <div class="destacada-item">
-                    <a href="pagina1.html">
-                        <img src="logo.png" alt="Noticia Destacada 1">
-                        <div class="descripcion">
-                            <p>Descripción corta de la noticia destacada 1...</p>
-                        </div>
-                    </a>
+    <main>
+        <section class="main-news">
+            <h2>Noticia Principal</h2>
+            <article class="news-item">
+                <img src="portada.jpg" alt="Descripción de la imagen">
+                <div class="news-content">
+                    <h3>Título de la Noticia Principal</h3>
+                    <p>Descripción breve de la noticia principal. Aquí puedes incluir un resumen o los puntos más importantes de la noticia.</p>
+                    <a href="#" class="read-more">Leer más</a>
                 </div>
-                <div class="destacada-item">
-                    <a href="pagina2.html">
-                        <img src="logo.png" alt="Noticia Destacada 2">
-                        <div class="descripcion">
-                            <p>Descripción corta de la noticia destacada 2...</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="destacada-item">
-                    <a href="pagina3.html">
-                        <img src="logo.png" alt="Noticia Destacada 3">
-                        <div class="descripcion">
-                            <p>Descripción corta de la noticia destacada 3...</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="destacada-item">
-                    <a href="pagina4.html">
-                        <img src="logo.png" alt="Noticia Destacada 4">
-                        <div class="descripcion">
-                            <p>Descripción corta de la noticia destacada 4...</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+            </article>
+        </section>
 
-    <!-- Sección de noticias con imágenes -->
-    <section id="noticias" class="section">
-        <div class="container">
-            <h2>Últimas Noticias</h2>
-
-            <div class="noticia">
-                <div class="noticia-contenido">
-                    <img src="portada.jpg" alt="Noticia 1">
-                    <div class="texto">
-                        <h3>¿Rearme o modernización? El Nuevo aliado Militar del Perú.
-                        </h3>
-                        <p>Nos hacemos fuertes por cielo, mar y tierra. Con los recientes acuerdos con Hyundai Rotem, STX Corporation y Korea Aerospace, Perú busca cambiar su panorama militar e industrial. Perú está en camino de reducir su dependencia de proveedores extranjeros ¿Rearme o modernización?</p>
-                        <a href="pagina5.html" class="leer-mas">Leer más</a>
+        <section class="other-news">
+            <h2>Otras Noticias</h2>
+            <div class="news-list">
+                <article class="news-item">
+                    <img src="portada.jpg" alt="Descripción de la imagen">
+                    <div class="news-content">
+                        <h3>Título de Noticia 1</h3>
+                        <p>Es bien sabido que, aunque Perú ha tenido momentos de fortaleza militar en su historia, en general no ha sido considerado una potencia militar. Sin embargo, esto está cambiando. Perú ha librado un total de 8 guerras a lo largo de su historia y, en muchas de ellas, no ha salido bien parado. Pero con el nuevo aliado militar del país, esta situación quedará en el pasado.
+                        </p>
+                        <a href="#" class="read-more">Leer más</a>
                     </div>
-                </div>
-            </div>
-
-            <div class="noticia">
-                <div class="noticia-contenido">
-                    <img src="imagen6.jpg" alt="Noticia 2">
-                    <div class="texto">
-                        <h3>Título de la noticia 2</h3>
-                        <p>Descripción corta de la noticia 2...</p>
-                        <a href="pagina6.html" class="leer-mas">Leer más</a>
+                </article>
+                <article class="news-item">
+                    <img src="logo.png" alt="Descripción de la imagen">
+                    <div class="news-content">
+                        <h3>Título de Noticia 2</h3>
+                        <p>Resumen de la noticia 2.</p>
+                        <a href="#" class="read-more">Leer más</a>
                     </div>
-                </div>
+                </article>
+                <!-- Añadir más artículos según sea necesario -->
             </div>
-
-            <div class="noticia">
-                <div class="noticia-contenido">
-                    <img src="imagen7.jpg" alt="Noticia 3">
-                    <div class="texto">
-                        <h3>Título de la noticia 3</h3>
-                        <p>Descripción corta de la noticia 3...</p>
-                        <a href="pagina7.html" class="leer-mas">Leer más</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Pie de página -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Nombre del Canal de YouTube. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

@@ -40,7 +40,7 @@ header .menu-toggle {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #282c34;
     padding: 1rem;
     width: 200px;
     height: 100vh;
@@ -79,7 +79,7 @@ header .menu-toggle {
 }
 
 .menu ul li a:hover {
-    background-color: #444;
+    background-color: #282c34;
 }
 
 /* Estilos para pantallas grandes (PC) */
@@ -243,6 +243,8 @@ h2 {
         align-items: center; /* Centra el contenido horizontalmente */
     }
 
+    
+
     .other-news .news-item {
         display: flex;
         flex-direction: column; /* Asegura que los elementos estén en columna */
@@ -270,4 +272,46 @@ h2 {
     .other-news .news-content p {
         margin: 10px 0;
     }
+
+    .other-news{
+       text-align: center;
+    
+    }
+
+    /* Estilos para la noticia principal en móviles */
+@media (max-width: 767px) {
+    .main-news .news-item {
+        position: relative;
+        max-width: 100%; /* Asegura que la noticia ocupe todo el ancho */
+    }
+
+    .main-news .news-item img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block;
+    }
+
+    .main-news .news-content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 10px; /* Espaciado interno para el contenido */
+        background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+        color: white; /* El texto será blanco para resaltar sobre la imagen */
+        text-align: center; /* Centra el texto horizontalmente */
+        border-radius: 8px; /* Bordes redondeados para el fondo */
+    }
+
+    .main-news .news-content h3 {
+        font-size: 24px; /* Tamaño ajustado para el título */
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+
+    .main-news .news-content .date {
+        font-size: 14px; /* Tamaño ajustado para la fecha */
+    }
+}
+
 }

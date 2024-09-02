@@ -1,3 +1,10 @@
+document.querySelector('.image-gallery').addEventListener('touchstart', function (e) {
+    this.classList.add('scrolling');
+}, { passive: true });
+
+document.querySelector('.image-gallery').addEventListener('touchend', function (e) {
+    this.classList.remove('scrolling');
+}, { passive: true });
 // En tu archivo script.js
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');

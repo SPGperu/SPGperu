@@ -1,18 +1,28 @@
+
+
+
 /* Estilos generales */
+.date {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #9b9494;
+}
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
-    background-color:#282c34;
+    background-color: #282c34;
     color: #fff;
     padding: 15px;
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 header .logo h1 {
@@ -20,6 +30,9 @@ header .logo h1 {
     margin: 0;
     font-size: 24px;
     letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.8s forwards;
 }
 
 header .menu-toggle {
@@ -34,6 +47,7 @@ header .menu-toggle {
     top: 15px;
     right: 15px;
     z-index: 1001;
+    transition: background-color 0.3s ease;
 }
 
 .menu {
@@ -62,6 +76,10 @@ header .menu-toggle {
     padding: 0;
     margin: 0;
     width: 100%;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.5s forwards;
+    animation-delay: 0.5s;
 }
 
 .menu ul li {
@@ -74,12 +92,13 @@ header .menu-toggle {
     font-size: 18px;
     padding: 10px 20px;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 5px;
 }
 
 .menu ul li a:hover {
-    background-color: #282c34;
+    background-color: #444;
+    transform: translateX(10px);
 }
 
 /* Estilos para pantallas grandes (PC) */
@@ -130,8 +149,33 @@ header .menu-toggle {
 
     .menu ul li a:hover {
         background-color: #f5f5f5;
+        color: #282c34;
     }
 }
+
+/* Animaciones */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Estilos para la noticia principal */
 .main-news {
     text-align: center; /* Centra el contenido dentro de la sección */
@@ -148,6 +192,9 @@ header .menu-toggle {
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px; /* Añade espacio alrededor del contenido */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s forwards;
 }
 
 .main-news .news-item img {
@@ -156,6 +203,11 @@ header .menu-toggle {
     max-width: 800px; /* Limita el ancho máximo de la imagen */
     max-height: 500px; /* Limita la altura máxima de la imagen */
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.main-news .news-item img:hover {
+    transform: scale(1.05);
 }
 
 .main-news .news-content {
@@ -181,6 +233,19 @@ header .menu-toggle {
 .main-news .read-more:hover {
     color: #007BFF;
 }
+
+/* Animaciones */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Estilos para las secciones de noticias */
 main {
     padding: 20px;
@@ -193,6 +258,9 @@ section {
 h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.8s forwards;
 }
 
 .news-item {
@@ -203,12 +271,20 @@ h2 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s forwards;
 }
 
 .news-item img {
     width: 250px; /* Tamaño ajustado para imagen más grande */
     height: 150px; /* Tamaño ajustado para imagen más grande */
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-item img:hover {
+    transform: scale(1.05);
 }
 
 .news-content {
@@ -243,8 +319,6 @@ h2 {
         align-items: center; /* Centra el contenido horizontalmente */
     }
 
-    
-
     .other-news .news-item {
         display: flex;
         flex-direction: column; /* Asegura que los elementos estén en columna */
@@ -252,12 +326,20 @@ h2 {
         width: 100%; /* Asegura que el ancho sea completo */
         max-width: 400px; /* Establece un ancho máximo para las noticias */
         margin-bottom: 20px; /* Añade espacio entre las noticias */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.7s forwards;
     }
 
     .other-news .news-item img {
         width: 100%; /* La imagen ocupará el ancho completo del contenedor */
         height: auto; /* Mantiene la proporción de la imagen */
         margin-bottom: 10px; /* Añade espacio debajo de la imagen */
+        transition: transform 0.3s ease;
+    }
+
+    .other-news .news-item img:hover {
+        transform: scale(1.05);
     }
 
     .other-news .news-content {
@@ -273,16 +355,19 @@ h2 {
         margin: 10px 0;
     }
 
-    .other-news{
-       text-align: center;
-    
+    .other-news {
+        text-align: center;
     }
+}
 
-    /* Estilos para la noticia principal en móviles */
+/* Estilos para la noticia principal en móviles */
 @media (max-width: 767px) {
     .main-news .news-item {
         position: relative;
         max-width: 100%; /* Asegura que la noticia ocupe todo el ancho */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.7s forwards;
     }
 
     .main-news .news-item img {
@@ -297,7 +382,7 @@ h2 {
         left: 20px;
         right: 20px;
         padding: 10px; /* Espaciado interno para el contenido */
-        background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
         color: white; /* El texto será blanco para resaltar sobre la imagen */
         text-align: center; /* Centra el texto horizontalmente */
         border-radius: 8px; /* Bordes redondeados para el fondo */
@@ -314,4 +399,82 @@ h2 {
     }
 }
 
+
+
+.highlighted-images .image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+}
+
+.highlighted-images .image-item {
+    position: relative;
+    width: 250px; /* Ancho del rectángulo vertical */
+    height: 400px; /* Altura del rectángulo vertical */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlighted-images .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.highlighted-images .image-item:hover img {
+    transform: scale(1.1); /* Aumenta la imagen al pasar el cursor */
+}
+
+.highlighted-images .image-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+
+.highlighted-images .image-content h3 {
+    font-size: 18px; /* Tamaño del título */
+    margin: 0;
+}
+
+.highlighted-images .image-content .image-date {
+    font-size: 14px; /* Tamaño de la fecha */
+    margin-top: 5px;
+}
+
+.section-title {
+    font-size: 24px; /* Tamaño del título de la sección */
+    margin-bottom: 20px;
+}
+/* Estilos para la galería de imágenes destacadas en móviles */
+@media (max-width: 767px) {
+    .highlighted-images .image-gallery {
+        display: flex; /* Flexbox para alinear horizontalmente */
+        flex-wrap: nowrap; /* Evita que las imágenes se envuelvan */
+        overflow-x: auto; /* Habilita el desplazamiento horizontal */
+        gap: 20px; /* Espacio entre las imágenes */
+        padding: 10px; /* Espaciado alrededor del contenedor */
+        -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en iOS */
+    }
+
+    .highlighted-images .image-item {
+        flex: 0 0 auto; /* Evita que las imágenes cambien de tamaño */
+        width: 250px; /* Ancho del rectángulo vertical */
+        height: 400px; /* Altura del rectángulo vertical */
+        scroll-snap-align: start; /* Las imágenes se alinean al inicio */
+    }
+
+    .highlighted-images .image-gallery::-webkit-scrollbar {
+        display: none; /* Oculta la barra de desplazamiento */
+    }
 }

@@ -36,6 +36,7 @@ header .logo h1 {
 }
 
 header .menu-toggle {
+    
     display: block;
     background-color: #282c34;
     color: white;
@@ -116,6 +117,7 @@ header .menu-toggle {
     }
 
     header .menu-toggle {
+        
         display: none;
     }
 
@@ -382,7 +384,7 @@ h2 {
         left: 20px;
         right: 20px;
         padding: 10px; /* Espaciado interno para el contenido */
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semitransparente */
         color: white; /* El texto será blanco para resaltar sobre la imagen */
         text-align: center; /* Centra el texto horizontalmente */
         border-radius: 8px; /* Bordes redondeados para el fondo */
@@ -435,19 +437,21 @@ h2 {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
     color: white;
-    padding: 10px;
+    padding: 19px;
     text-align: center;
     border-radius: 0 0 8px 8px;
 }
 
 .highlighted-images .image-content h3 {
+    text-align: left; /* cambiar si es necesario /
     font-size: 18px; /* Tamaño del título */
     margin: 0;
 }
 
 .highlighted-images .image-content .image-date {
+    text-align: left; /*cambiar si es necesario /
     font-size: 14px; /* Tamaño de la fecha */
     margin-top: 5px;
 }
@@ -456,25 +460,16 @@ h2 {
     font-size: 24px; /* Tamaño del título de la sección */
     margin-bottom: 20px;
 }
-/* Estilos para la galería de imágenes destacadas en móviles */
 @media (max-width: 767px) {
-    .highlighted-images .image-gallery {
-        display: flex; /* Flexbox para alinear horizontalmente */
-        flex-wrap: nowrap; /* Evita que las imágenes se envuelvan */
-        overflow-x: auto; /* Habilita el desplazamiento horizontal */
-        gap: 20px; /* Espacio entre las imágenes */
-        padding: 10px; /* Espaciado alrededor del contenedor */
-        -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en iOS */
-    }
-
-    .highlighted-images .image-item {
-        flex: 0 0 auto; /* Evita que las imágenes cambien de tamaño */
-        width: 250px; /* Ancho del rectángulo vertical */
-        height: 400px; /* Altura del rectángulo vertical */
-        scroll-snap-align: start; /* Las imágenes se alinean al inicio */
-    }
-
-    .highlighted-images .image-gallery::-webkit-scrollbar {
-        display: none; /* Oculta la barra de desplazamiento */
-    }
+   
+.highlighted-images .image-item {
+    position: relative;
+    width: 406px; /* Ancho del rectángulo vertical */
+    height: 220px; /* Altura del rectángulo vertical */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
 }

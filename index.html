@@ -3,150 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias Perú</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Peruvian Market Trends</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #282c32;
+            color: white;
+            padding: 1rem 0;
+            position: relative;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .nav-links {
+            display: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+            display: block;
+        }
+
+        /* Menú móvil */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #282c32;
+            transition: left 0.3s ease-in-out;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .mobile-menu.active {
+            left: 0;
+        }
+        .mobile-menu-links {
+            padding: 60px 20px 20px;
+        }
+        .mobile-menu-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+
+        /* Sección de imágenes destacadas */
+        .featured-images {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem 0;
+        }
+        .featured-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .featured-image-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+        .featured-image-content h3 {
+            margin: 0 0 0.5rem 0;
+        }
+        .featured-image-content p {
+            margin: 0;
+        }
+
+        /* Contenido principal */
+        main {
+            padding: 2rem 0;
+        }
+        h2 {
+            color: #282c32;
+            margin-bottom: 1rem;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .news-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-content {
+            padding: 1rem;
+        }
+        .analysis, .events {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555;
+        }
+
+        /* Media queries para responsividad */
+        @media (min-width: 768px) {
+            /* Sección de imágenes destacadas */
+        .featured-images {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem 0;
+        }
+        .featured-image {
+            position: relative;
+            height: 400px;
+            
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .featured-image-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+        .featured-image-content h3 {
+            margin: 0 0 0.5rem 0;
+        }
+        .featured-image-content p {
+            margin: 0;
+        }
+            .nav-links {
+                display: flex;
+            }
+            .menu-icon {
+                display: none;
+            }
+            .featured-images {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .featured-image {
+                flex: 1 1 calc(33.333% - 1rem);
+                max-width: calc(33.333% - 1rem);
+            }
+            .news-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .footer-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Noticias Perú</h1>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="https://via.placeholder.com/40" alt="Logo">
+                    <span>Peruvian Market Trends</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#destacados">Destacados</a>
+                    <a href="#noticias">Noticias</a>
+                    <a href="#analisis">Análisis</a>
+                    <a href="#eventos">Eventos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="menu-icon">☰</div>
+            </nav>
         </div>
-        <button class="menu-toggle">☰</button>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Economía</a></li>
-                <li><a href="#">Política</a></li>
-                <li><a href="#">Sociedad</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section class="main-news">
-            <article class="news-item">
-                <img src="portada.jpg" alt="Descripción de la imagen">
-                <div class="news-content">
-                    <h3>Título de la Noticia Principal</h3>
-                    <div class="date">Fecha de la noticia</div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#destacados">Destacados</a>
+            <a href="#noticias">Noticias</a>
+            <a href="#analisis">Análisis</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <section id="destacados" class="featured-images container">
+        <div class="featured-image">
+            <img src="https://via.placeholder.com/800x400" alt="Imagen destacada 1">
+            <div class="featured-image-content">
+                <h3>Innovación en Retail</h3>
+                <p>15 de Septiembre, 2024</p>
+            </div>
+        </div>
+        <div class="featured-image">
+            <img src="https://via.placeholder.com/800x400" alt="Imagen destacada 2">
+            <div class="featured-image-content">
+                <h3>Tendencias de E-commerce</h3>
+                <p>22 de Septiembre, 2024</p>
+            </div>
+        </div>
+        <div class="featured-image">
+            <img src="https://via.placeholder.com/800x400" alt="Imagen destacada 3">
+            <div class="featured-image-content">
+                <h3>Sostenibilidad en Retail</h3>
+                <p>29 de Septiembre, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="noticias">
+            <h2>Últimas Noticias del Mercado</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/400x200" alt="Noticia 1">
+                    <div class="news-content">
+                        <h3>Crecimiento del E-commerce en Perú</h3>
+                        <p>El comercio electrónico en Perú ha experimentado un crecimiento significativo...</p>
+                    </div>
                 </div>
-            </article>
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/400x200" alt="Noticia 2">
+                    <div class="news-content">
+                        <h3>Nuevas Tendencias en Retail</h3>
+                        <p>Las tiendas físicas están adoptando tecnologías innovadoras para mejorar...</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/400x200" alt="Noticia 3">
+                    <div class="news-content">
+                        <h3>Sostenibilidad en el Mercado Peruano</h3>
+                        <p>Cada vez más empresas peruanas están implementando prácticas sostenibles...</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="other-news">
-            <h2 class="Actualidad">Actualidad</h2>
-            <div class="news-list">
-                <article class="news-item">
-                    <img src="portada.jpg" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 1</h3>
-                        <p>Es bien sabido que, aunque Perú ha tenido momentos de fortaleza militar en su historia, en general no ha sido considerado una potencia militar. Sin embargo, esto está cambiando. Perú ha librado un total de 8 guerras a lo largo de su historia y, en muchas de ellas, no ha salido bien parado. Pero con el nuevo aliado militar del país, esta situación quedará en el pasado.</p>
-                        <div class="date">04/09/2024</div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <img src="logo.png" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 2</h3>
-                        <p>Resumen de la noticia 2.</p>
-                        <div class="date">04/06/2024</div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <img src="portada.jpg" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 1</h3>
-                        <p>Es bien sabido que, aunque Perú ha tenido momentos de fortaleza militar en su historia, en general no ha sido considerado una potencia militar. Sin embargo, esto está cambiando. Perú ha librado un total de 8 guerras a lo largo de su historia y, en muchas de ellas, no ha salido bien parado. Pero con el nuevo aliado militar del país, esta situación quedará en el pasado.</p>
-                        <div class="date">04/09/2024</div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <img src="logo.png" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 2</h3>
-                        <p>Resumen de la noticia 2.</p>
-                        <div class="date">04/06/2024</div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <img src="portada.jpg" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 1</h3>
-                        <p>Es bien sabido que, aunque Perú ha tenido momentos de fortaleza militar en su historia, en general no ha sido considerado una potencia militar. Sin embargo, esto está cambiando. Perú ha librado un total de 8 guerras a lo largo de su historia y, en muchas de ellas, no ha salido bien parado. Pero con el nuevo aliado militar del país, esta situación quedará en el pasado.</p>
-                        <div class="date">04/09/2024</div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <img src="logo.png" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 2</h3>
-                        <p>Resumen de la noticia 2.</p>
-                        <div class="date">04/06/2024</div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <img src="portada.jpg" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 1</h3>
-                        <p>Es bien sabido que, aunque Perú ha tenido momentos de fortaleza militar en su historia, en general no ha sido considerado una potencia militar. Sin embargo, esto está cambiando. Perú ha librado un total de 8 guerras a lo largo de su historia y, en muchas de ellas, no ha salido bien parado. Pero con el nuevo aliado militar del país, esta situación quedará en el pasado.</p>
-                        <div class="date">04/09/2024</div>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <img src="logo.png" alt="Descripción de la imagen">
-                    <div class="news-content">
-                        <h3>Título de Noticia 2</h3>
-                        <p>Resumen de la noticia 2.</p>
-                        <div class="date">04/06/2024</div>
-                    </div>
-                </article>
+        <section id="analisis" class="analysis">
+            <h2>Análisis de Mercado</h2>
+            <h3>Tendencias del Sector Retail en Perú 2024</h3>
+            <ul>
+                <li>Aumento de la adopción de tecnologías de pago sin contacto</li>
+                <li>Crecimiento de las marcas propias en supermercados</li>
+                <li>Mayor enfoque en la experiencia del cliente en tiendas físicas</li>
+                <li>Expansión de retailers internacionales en el mercado peruano</li>
+            </ul>
+        </section>
 
-                <section class="highlighted-images">
-                    <h2 class="section-title">Imágenes Destacadas</h2>
-                    <div class="image-gallery">
-                        <div class="image-item">
-                            <img src="portada.jpg"1 alt="Imagen 1">
-                            <div class="image-content">
-                                <h3>Título 1</h3>
-                                <div class="image-date">Fecha 1</div>
-                            </div>
-                        </div>
-                        <div class="image-item">
-                            <img src="portada.jpg" alt="Imagen 2">
-                            <div class="image-content">
-                                <h3>Título 2</h3>
-                                <div class="image-date">Fecha 2</div>
-                            </div>
-                        </div>
-                        <div class="image-item">
-                            <img src="logo.png" alt="Imagen 1">
-                            <div class="image-content">
-                                <h3>Título 1</h3>
-                                <div class="image-date">Fecha 1</div>
-                            </div>
-                        </div>
-                        <div class="image-item">
-                            <img src="imagen2.jpg" alt="Imagen 2">
-                            <div class="image-content">
-                                <h3>Título 2</h3>
-                               
-                                
-                                <div class="image-date">Fecha 2</div>
-                            </div>
-                        </div>
-                        <!-- Agrega más imágenes según sea necesario -->
-                    </div>
-                </section>
-
-               
-                       
-                 
-                
-            </div>
+        <section id="eventos" class="events">
+            <h2>Próximos Eventos</h2>
+            <h3>Feria de Retail Innovación Lima 2024</h3>
+            <p><strong>Fecha:</strong> 15-17 Octubre</p>
+            <p>Únete a los líderes del sector retail en Perú para explorar las últimas innovaciones y tendencias del mercado.</p>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Peruvian Market Trends</h3>
+                    <p>Tu fuente confiable de información sobre el mercado retail en Perú.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <div class="footer-links">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#destacados">Destacados</a>
+                        <a href="#noticias">Noticias</a>
+                        <a href="#analisis">Análisis</a>
+                        <a href="#eventos">Eventos</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: info@peruvianmarkettrends.com</p>
+                    <p>Teléfono: +51 1 234 5678</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Peruvian Market Trends. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.overlay');
+            const body = document.body;
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('active');
+                overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+                body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+            }
+
+            menuIcon.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+            // Cerrar el menú al hacer clic en un enlace
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            // Función para manejar el cambio de tamaño de la ventana
+            function handleResize() {
+                if (window.innerWidth >= 768) {
+                    mobileMenu.classList.remove('active');
+                    overlay.style.display = 'none';
+                    body.style.overflow = '';
+                }
+            }
+
+            // Escuchar el evento de cambio de tamaño de la ventana
+            window.addEventListener('resize', handleResize);
+
+            // Llamar a la función una vez al cargar para establecer el estado inicial
+            handleResize();
+        });
+    </script>
 </body>
 </html>

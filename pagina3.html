@@ -3,71 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Noticia - Canal de YouTube</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Estilos específicos para esta página */
-        .noticia-central {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-        }
-        
-        .noticia-central img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .noticia-central h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .noticia-central p {
-            font-size: 18px;
-            margin: 0;
-        }
-    </style>
+    <title>Peruvian Market Trends</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- Encabezado con el nombre del canal -->
     <header>
         <div class="container">
-            <h1>Noticias del Canal de YouTube</h1>
             <nav>
-                <ul class="menu-list">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#noticias">Noticias</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
+                <div class="logo">
+                    <img src="https://via.placeholder.com/40" alt="Logo">
+                    <span>Peruvian Market Trends</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#destacados">Destacados</a>
+                    <a href="#noticias">Noticias</a>
+                    <a href="#analisis">Análisis</a>
+                    <a href="#eventos">Eventos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="menu-icon">☰</div>
             </nav>
         </div>
     </header>
 
-    <!-- Sección de la noticia central -->
-    <section class="section">
-        <div class="container">
-            <div class="noticia-central">
-                <img src="imagen-noticia.jpg" alt="Imagen de la Noticia">
-                <h2>Título de la Noticia</h2>
-                <p>Descripción completa de la noticia. Aquí puedes agregar todos los detalles relevantes sobre la noticia que estás presentando. Este texto debe ser informativo y ofrecer valor a los lectores.</p>
-            </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#destacados">Destacados</a>
+            <a href="#noticias">Noticias</a>
+            <a href="#analisis">Análisis</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#contacto">Contacto</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Pie de página -->
+    <div class="overlay"></div>
+   <!-- Noticia principal destacada -->
+    <main class="container">
+   <section id="noticia-principal">
+    <div class="noticia-imagen">
+        <img src="portada.jpg" alt="Imagen de la noticia principal">
+    </div>
+    <div class="noticia-contenido">
+        <h1>Título de la Noticia Principal</h1>
+        <p class="fecha">Fecha de Publicación</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a velit vitae eros laoreet dignissim. Fusce fermentum sollicitudin risus, vel feugiat quam varius eu. Nam a suscipit velit. Aenean feugiat, lorem ac ultricies feugiat, orci dui pulvinar purus, non posuere turpis est in arcu. Donec a varius velit. Etiam dignissim justo a nulla sodales, ac varius orci interdum. Vestibulum volutpat orci nec est feugiat, ac viverra metus dictum. Praesent malesuada lectus eget diam aliquam, nec interdum urna consequat. Aliquam erat volutpat.</p>
+        <p>Maecenas a semper risus. Pellentesque ut turpis vel leo congue tempor. Aliquam erat volutpat. Sed cursus orci non lorem tincidunt, ac efficitur mauris iaculis. Nulla facilisi. Sed at tincidunt ipsum. Quisque non tristique ex, ut laoreet enim. Nulla dictum nunc ut dolor consequat, id malesuada nunc gravida. Sed posuere tristique risus id egestas.</p>
+    </div>
+</section>
+</main>
+
+
+    <main class="container">
+        <section id="noticias">
+            <h2>Últimas Noticias del Mercado</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <a href="noticia1.html">
+                        <img src="https://via.placeholder.com/400x200" alt="Noticia 1">
+                        <div class="news-content">
+                            <h3>Crecimiento del E-commerce en Perú</h3>
+                            <p>El comercio electrónico en Perú ha experimentado un crecimiento significativo...</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="noticia2.html">
+                        <img src="https://via.placeholder.com/400x200" alt="Noticia 2">
+                        <div class="news-content">
+                            <h3>Nuevas Tendencias en Retail</h3>
+                            <p>Las tiendas físicas están adoptando tecnologías innovadoras para mejorar...</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="noticia3.html">
+                        <img src="https://via.placeholder.com/400x200" alt="Noticia 3">
+                        <div class="news-content">
+                            <h3>Sostenibilidad en el Mercado Peruano</h3>
+                            <p>Cada vez más empresas peruanas están implementando prácticas sostenibles...</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="analisis" class="analysis">
+            <h2>Análisis de Mercado</h2>
+            <h3>Tendencias del Sector Retail en Perú 2024</h3>
+            <ul>
+                <li>Aumento de la adopción de tecnologías de pago sin contacto</li>
+                <li>Crecimiento de las marcas propias en supermercados</li>
+                <li>Mayor enfoque en la experiencia del cliente en tiendas físicas</li>
+                <li>Expansión de retailers internacionales en el mercado peruano</li>
+            </ul>
+        </section>
+
+        <section id="eventos" class="events">
+            <h2>Próximos Eventos</h2>
+            <h3>Feria de Retail Innovación Lima 2024</h3>
+            <p><strong>Fecha:</strong> 15-17 Octubre</p>
+            <p>Únete a los líderes del sector retail en Perú para explorar las últimas innovaciones y tendencias del mercado.</p>
+        </section>
+    </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Nombre del Canal de YouTube. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Peruvian Market Trends</h3>
+                    <p>Tu fuente confiable de información sobre el mercado retail en Perú.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <div class="footer-links">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#destacados">Destacados</a>
+                        <a href="#noticias">Noticias</a>
+                        <a href="#analisis">Análisis</a>
+                        <a href="#eventos">Eventos</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: info@peruvianmarkettrends.com</p>
+                    <p>Teléfono: +51 1 234 5678</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Peruvian Market Trends. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 

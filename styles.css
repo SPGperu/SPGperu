@@ -303,6 +303,7 @@ footer {
 }
 
 .footer-content {
+    text-align: justify;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -311,6 +312,7 @@ footer {
     margin-bottom: 1rem;
 }
 .footer-links a {
+  
     color: #ccc;
     text-decoration: none;
     display: block;

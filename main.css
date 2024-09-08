@@ -1,40 +1,3 @@
-/* Estilos generales */
-
-/* Estilos para la noticia principal destacada */
-.noticia-foto img {
-    width: 100%;
-        border-radius: 10px;
-        max-height: 80000px;
-        object-fit: cover;
-    }
-
-.Titulo {
-    text-align: left; 
-
-}
-#noticia-principal {
-    text-align: center;
-    margin: 30px 0px 40px;
-}
-
-.noticia-imagen img {
-    width: 100%;
-    border-radius: 10px;
-    max-height: 800px;
-    object-fit: cover;
-}
-
-.noticia-contenido {
-    text-align: justify;
-    margin: 8px auto;
-    max-width: 1000px;
-}
-
-.noticia-contenido h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
 .noticia-contenido .fecha {
     font-size: 14px;
     color: #666;
@@ -44,12 +7,28 @@
 
 
 
-
 .noticia-contenido p {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.3;
 }
+
+.responsive-iframe {
+    position: relative;
+    width: 100%;            /* El iframe ocupa todo el ancho del contenedor */
+    height: 0;              /* La altura se ajustará según el padding-bottom */
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (altura / ancho * 100) */
+  }
+  
+  .responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;           /* Sin borde alrededor del iframe */
+  }
+
 
 
 /* Eliminar subrayado de los enlaces */

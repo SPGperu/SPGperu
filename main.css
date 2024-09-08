@@ -1,3 +1,40 @@
+/* Estilos generales */
+
+/* Estilos para la noticia principal destacada */
+.noticia-foto img {
+    width: 100%;
+        border-radius: 10px;
+        max-height: 80000px;
+        object-fit: cover;
+    }
+
+.Titulo {
+    text-align: left; 
+
+}
+#noticia-principal {
+    text-align: center;
+    margin: 30px 0px 40px;
+}
+
+.noticia-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.noticia-contenido {
+    text-align: justify;
+    margin: 8px auto;
+    max-width: 1000px;
+}
+
+.noticia-contenido h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 .noticia-contenido .fecha {
     font-size: 14px;
     color: #666;

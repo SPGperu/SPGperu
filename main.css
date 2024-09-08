@@ -13,9 +13,8 @@
 
 }
 #noticia-principal {
-    
     text-align: center;
-    margin: 30px 0px 30px;
+    margin: 30px 0px 40px;
 }
 
 .noticia-imagen img {
@@ -42,11 +41,14 @@
     margin-bottom: 20px;
 }
 
+
+
+
+
 .noticia-contenido p {
-    
+    margin-bottom: 20px;
     font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 40px;
+    line-height: 1.3;
 }
 
 

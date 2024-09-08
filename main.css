@@ -32,7 +32,7 @@
 }
 
 .noticia-contenido h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
@@ -43,6 +43,7 @@
 }
 
 .noticia-contenido p {
+    
     font-size: 16px;
     line-height: 1.4;
     margin-bottom: 40px;

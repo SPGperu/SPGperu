@@ -1,3 +1,92 @@
+.peru-retail-tv-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+
+.player-container {
+    display: flex;
+    padding: 20px;
+}
+
+.peru-retail-tv-container h2 {
+    color: #fff;
+    padding: 15px 20px;
+    margin: 0;
+    background-color: #333;
+    font-size: 1.2em;
+}
+
+
+.video-player {
+    position: relative;
+    width: 75%; /* Ajusta el ancho según tu preferencia */
+    padding-bottom: 40%; /* Mantiene la relación de aspecto 16:9 */
+    height: 0; /* Altura inicial en 0 */
+    overflow: hidden;
+    border-radius: 4px;
+    margin-right: 20px; /* Mantiene el margen derecho */
+}
+
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ocupa todo el contenedor */
+    border: none;
+}
+
+.thumbnails {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 460px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 51.25%; /* Mantiene la relación de aspecto 16:9 */
+    height: 0;
+        margin-bottom: 15px;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+}
+
+.thumbnail-info {
+    overflow: visible;
+    background-color: #333;
+    padding: 10px;
+    border: solid red;
+}
+.thumbnail-info p {
+    margin: 98765432;
+    color: #333;
+    font-size: 14px;
+}
+
+
+
+
+
+
 /* Estilos generales */
 /* Estilos generales */
 

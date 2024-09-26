@@ -396,7 +396,7 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 1rem ;
-    gap: 1rem;
+    gap: 1.5rem;
 
 }
 .featured-image {
@@ -573,11 +573,4 @@ footer {
     .footer-content {
         grid-template-columns: repeat(4, 1fr);
     }
-    
-
-/* Cambiar color de los enlaces en noticias */
- a {
-    text-decoration: none;
-    color: #000000; /* Celeste */
-}
 }

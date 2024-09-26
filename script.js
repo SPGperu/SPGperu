@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', toggleMenu);
     });
 
+
+
     const mainPlayer = document.getElementById('main-player');
     const thumbnails = document.querySelectorAll('.thumbnail');
 

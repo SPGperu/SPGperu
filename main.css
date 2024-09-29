@@ -64,189 +64,51 @@ body {
 	color: #fff;
 	font-size: 14px;
 }
-@media (max-width: 900px) {
-	.peru-retail-tv-container {
-		width: 100%;
-	}
-	.player-container {
-		flex-direction: column;
-		padding: 10px;
-	}
-	.video-player {
-		margin-right: 0;
-		margin-bottom: 20px;
-	}
-	.video-player iframe {
-		height: 420px;
-		/* 16:9 aspect ratio */
-		max-height: 4000px;
-	}
-	.thumbnails {
-		max-height: none;
-		display: flex;
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-	}
-	.thumbnail {
-		flex: 0 0 auto;
-		width: 400px;
-		margin-right: 15px;
-		margin-bottom: 0;
-	}
-	.thumbnail:last-child {
-		margin-right: 0;
-	}
-}
-@media (max-width: 768px) {
-	.peru-retail-tv-container {
-		width: 100%;
-	}
-	.player-container {
-		flex-direction: column;
-		padding: 10px;
-	}
-	.video-player {
-		margin-right: 0;
-		margin-bottom: 20px;
-	}
-	.video-player iframe {
-		height: 339px;
-		/* 16:9 aspect ratio */
-		max-height: 4000px;
-	}
-	.thumbnails {
-		max-height: none;
-		display: flex;
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-	}
-	.thumbnail {
-		flex: 0 0 auto;
-		width: 200px;
-		margin-right: 15px;
-		margin-bottom: 0;
-	}
-	.thumbnail:last-child {
-		margin-right: 0;
-	}
-}
-@media (max-width: 480px) {
-	.peru-retail-tv-container {
-		width: 100%;
-	}
-	.player-container {
-		flex-direction: column;
-		padding: 10px;
-	}
-	.video-player {
-		margin-right: 0;
-		margin-bottom: 20px;
-	}
-	.video-player iframe {
-		height: 200px;
-		/* 16:9 aspect ratio */
-		max-height: 4000px;
-	}
-	.thumbnails {
-		max-height: none;
-		display: flex;
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-	}
-	.thumbnail {
-		flex: 0 0 auto;
-		width: 200px;
-		margin-right: 15px;
-		margin-bottom: 0;
-	}
-	.thumbnail:last-child {
-		margin-right: 0;
-	}
-}
-@media (max-width: 320px) {
-	.peru-retail-tv-container {
-		width: 100%;
-	}
-	.player-container {
-		flex-direction: column;
-		padding: 10px;
-	}
-	.video-player {
-		margin-right: 0;
-		margin-bottom: 20px;
-	}
-	.video-player iframe {
-		height: 140px;
-		/* 16:9 aspect ratio */
-		max-height: 4000px;
-	}
-	.thumbnails {
-		max-height: none;
-		display: flex;
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-	}
-	.thumbnail {
-		flex: 0 0 auto;
-		width: 200px;
-		margin-right: 15px;
-		margin-bottom: 0;
-	}
-	.thumbnail:last-child {
-		margin-right: 0;
-	}
-}
-/* Estilos generales */
-/* Estilos generales */
 
-/* Estilos para la noticia principal destacada */
-#noticia-principal {
-    
-    text-align: center;
-    margin: 70px 10px 20px;
-}
-
-.noticia-imagen img {
-   
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-}
-@media (max-width: 900px) {
-    .noticia-imagen img {
-        margin-top: 65px;
+@media (max-width: 772px) {
+    .peru-retail-tv-container {
+        
         width: 100%;
-        max-height: 400px;
-        object-fit: cover;
+    }
+    .player-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .video-player {
+        margin-right: 0;
+        margin-bottom: 20px;
+        position: relative; /* Permite el posicionamiento absoluto del iframe */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        padding-top: 56.25%; /* Mantiene la relación de aspecto 16:9 (9 / 16 * 100) */
+        overflow: hidden; /* Oculta cualquier contenido que desborde el contenedor */
+    }
+    
+    .video-player iframe {
+        position: absolute; /* Permite que el iframe ocupe el 100% del contenedor */
+        top: 0;
+        left: 0;
+        width: 100%; /* Asegura que el iframe ocupe todo el ancho del contenedor */
+        height: 100%; /* Asegura que el iframe ocupe todo el alto del contenedor */
+        max-height: 4000px; /* Altura máxima opcional para el iframe */
+        border: none; /* Opcional: elimina el borde del iframe */
+    }
+    .thumbnails {
+        max-height: none;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .thumbnail {
+        flex: 0 0 auto;
+        width: 200px;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+    .thumbnail:last-child {
+        margin-right: 0;
     }
 }
-
-.noticia-contenido {
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.noticia-contenido h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.noticia-contenido .fecha {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.noticia-contenido p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
 /* Estilos para secciones de noticias */
 main {
     padding: 0 20px;
@@ -415,6 +277,7 @@ main {
     padding: 2rem 0;
     animation: fadeIn 1s ease-in;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -432,9 +295,11 @@ h2 {
 
 .news-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Una columna por defecto */
     gap: 1rem;
 }
+
+/* Estilo del elemento de noticias */
 .news-item {
     background-color: white;
     border-radius: 8px;
@@ -442,20 +307,43 @@ h2 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
+
 .news-item:hover {
     transform: translateY(-5px);
 }
+
+/* Estilo de la imagen */
 .news-item img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto; /* Ajusta la altura para mantener la proporción */
+    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
     transition: transform 0.3s ease;
 }
+
 .news-item img:hover {
     transform: scale(1.05);
 }
+
+/* Contenido de noticias */
 .news-content {
     padding: 1rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 772px) {
+    .news-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 773px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    }
+    .news-item img {
+        height: auto; /* Altura automática para mantener la proporción en tres columnas */
+    }
 }
 
 .analysis, .events {
